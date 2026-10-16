@@ -1,0 +1,63 @@
+name: Build & Release Android APK
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release-apk:
+    name: Build Flutter APK & Publish Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Build Release APK
+        run: flutter build apk --release --no-tree-shake-icons
+
+      - name: Rename APK for Release
+        run: cp build/app/outputs/flutter-apk/app-release.apk FinansBot-v2-MVP.apk
+
+      - name: Create or Update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v0.2.0-mvp
+          name: "FinansBot v2 — Gemini AI & Akıllı Bildirimler (MVP)"
+          body: |
+            ## 📱 FinansBot v2 (MVP) Android Kurulum Paketi
+            
+            Aşağıdaki **Assets** bölümünden **`FinansBot-v2-MVP.apk`** dosyasını doğrudan indirip Android cihazınıza kurabilirsiniz.
+            
+            ### ✨ Bu Sürümdeki Özellikler
+            - **Doğrudan Google Gemini API Entegrasyonu** (`gemini-2.5-flash`, `gemini-2.0-flash`, `gemini-2.5-pro`)
+            - **Proaktif AI Finans Fikir Bildirimleri** (Periyodik ve anlık fikir üretimi + uygulama içi bildirim banner'ı)
+            - **3 Sekmeli Koyu-Altın MVP Arayüzü:** Sohbet, AI Fikirler (Bildirim Merkezi) ve Finansal Özet & Ayarlar
+            - **Sesli Komut, Kişisel AI Hafızası ve Ekran Görüntüsü Koruması**
+          files: |
+            FinansBot-v2-MVP.apk
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
