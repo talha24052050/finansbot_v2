@@ -1,7 +1,7 @@
 name: finansbot_v2
-description: "A new Flutter project."
+description: "Yapay zeka (Gemini) destekli kişisel finans asistanı ve akıllı bildirim MVP uygulaması."
 publish_to: 'none'
-version: 0.1.0+1
+version: 0.2.0+1
 
 environment:
   sdk: ^3.11.5
@@ -9,6 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^1.2.2
+  shared_preferences: ^2.3.3
+  speech_to_text: ^7.0.0
+  flutter_markdown_plus: ^1.0.7
 
 dev_dependencies:
   flutter_test:
