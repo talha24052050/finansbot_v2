@@ -1,17 +1,17 @@
 # FinansBot v2 — Gemini AI Destekli Kişisel Finans Asistanı (MVP)
 
-[![Android APK İndir](https://img.shields.io/badge/📱_Android_APK_İndir-FinansBot_v2_MVP-CBAA35?style=for-the-badge&logo=android&logoColor=15110A)](https://github.com/talha24052050/finansbot_v2/releases/latest/download/FinansBot-v2-MVP.apk)
+[![Android APK İndir](https://img.shields.io/badge/📱_Android_APK_İndir-FinansBot_v2_MVP-CBAA35?style=for-the-badge&logo=android&logoColor=15110A)](https://github.com/talha24052050/finansbot_v2/raw/master/FinansBot-v2-MVP.apk)
 [![GitHub Releases](https://img.shields.io/badge/Sürümler_(Releases)-v0.2.0--mvp-131E2E?style=for-the-badge&logo=github)](https://github.com/talha24052050/finansbot_v2/releases)
 
 `finansbot_v2`, ilk versiyonun (`finansbot`) koyu-altın (Dark & Gold) tasarım dilini koruyarak doğrudan **Google Gemini API** entegrasyonu, **Proaktif AI Fikir Bildirimleri** ve **Finansal Özet / Ayarlar Panosu** ile geliştirilmiş MVP sürümüdür.
 
 ## 📲 Doğrudan APK İndirme (Android)
 
-Android telefonunuza kurmak için sağdaki **Releases** bölümünden veya doğrudan aşağıdaki bağlantıya tıklayarak güncel APK dosyasını indirebilirsiniz:
+Android telefonunuza kurmak için doğrudan aşağıdaki bağlantıya tıklayarak güncel APK dosyasını tek tıkla indirebilirsiniz:
 
-👉 **[FinansBot-v2-MVP.apk İndir (Son Sürüm)](https://github.com/talha24052050/finansbot_v2/releases/latest/download/FinansBot-v2-MVP.apk)**
+👉 **[FinansBot-v2-MVP.apk İndir (Son Sürüm)](https://github.com/talha24052050/finansbot_v2/raw/master/FinansBot-v2-MVP.apk)**
 
-*(Her `master` push işleminde GitHub Actions otomatik olarak yeni APK derleyip Releases bölümünü günceller.)*
+*(Her `master` push işleminde GitHub Actions da otomatik olarak yeni APK derleyip Releases bölümünü günceller.)*
 
 ---
 
